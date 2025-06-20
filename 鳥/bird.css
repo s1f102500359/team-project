@@ -1,0 +1,11 @@
+div#top,#down{display: flex;flex-direction: row;}
+div.logo{width: 15%;position: fixed;}
+div.title{width: 85%;border: solid 1px;margin: 5px;}
+div.menu{width: 15%;height: 80%;border: solid 1px;margin-right: 5px;position: fixed;}
+div.main{width: 85%;height: 80%;display: flex;flex-direction: column;}
+h2,h1,p.center{text-align: center;}
+div.a{display: flex;flex-direction: row;justify-content: flex-start;}
+div.explain,.image{width: 50%;}
+div.space{width: 25%;}
+div.logospace{width: 15%;}
+div.menuspace{width: 15%;height: 80%;margin-right: 5px}
