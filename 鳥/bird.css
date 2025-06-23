@@ -16,7 +16,7 @@ div.image{background-color: #E8FEE9;padding-top: 10%;padding-left: 10%;}
 @keyframes moveText{from{right: 0;}to{right: 50px;}}
 div.explain{border: solid 30px;border-image: linear-gradient(to bottom,#a2ecc4,#d0f4f7)1 ;}
 div.image{background:linear-gradient(to bottom,#a2ecc4,#d0f4f7);padding-top: 10%;padding-left: 10%;}
-
+body{overflow-x: hidden;}
 
   
 
