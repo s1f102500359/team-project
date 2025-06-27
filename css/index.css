@@ -8,4 +8,9 @@ h1{
     margin: 0;
     padding: 20px;
     background-color: rgb(197, 173, 136);
+
+img{
+    width: 200px;
+    padding-left: 400px;
+
 }
