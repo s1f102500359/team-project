@@ -3,6 +3,17 @@
     ;
 }
 img{
-    width: 200px;
-    padding-left: 400px;
+    height: 300px;
+}
+#bear{
+    position: relative;
+    left: 206px;
+}
+#bird{
+    position: relative;
+    left: 200px;
+}
+#cat{
+    position: relative;
+    left: 433px
 }
