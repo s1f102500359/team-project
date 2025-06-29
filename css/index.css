@@ -9,18 +9,29 @@ h1{
     background-color: rgb(197, 173, 136);
 }
 
-img{
+.links img{
     height: 300px;
+    transition: transform 0.3s ease-in-out;
+    z-index: 1;
+}
+.links img:hover  {
+  transform: scale(1.1);
+  z-index: 10;
+}
+#dog{
+    position: relative;
 }
 #bear{
     position: relative;
-    left: 206px;
+    left: 203px;
 }
 #bird{
     position: relative;
     left: 200px;
+    bottom: 21px;
 }
 #cat{
     position: relative;
-    left: 433px
+    left: 430px;
+    bottom: 21px;
 }
