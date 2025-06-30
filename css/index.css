@@ -1,7 +1,6 @@
 body{
     margin: 0;
     background-color: #F1F8E9;
-
 }
 
 h1{
@@ -9,9 +8,31 @@ h1{
     padding: 20px;
     background-color: #c2cd99;
     text-align: center;
+}
 
-img{
-    width: 200px;
-    padding-left: 400px;
-
+.links img{
+    height: 300px;
+    transition: transform 0.3s ease-in-out;
+    z-index: 1;
+}
+.links img:hover  {
+  transform: scale(1.1);
+  z-index: 10;
+}
+#dog{
+    position: relative;
+}
+#bear{
+    position: relative;
+    left: 203px;
+}
+#bird{
+    position: relative;
+    left: 200px;
+    bottom: 21px;
+}
+#cat{
+    position: relative;
+    left: 430px;
+    bottom: 21px;
 }
