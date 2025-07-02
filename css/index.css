@@ -6,7 +6,10 @@ body{
 h1{
     margin: 0;
     padding: 20px;
-    background-color: #c2cd99;
+    background-color: #52958B;
+    border-bottom: double 7px #004D47;
+    border-top: double 7px #004D47;
+    color: #004D47;
     text-align: center;
 }
 
