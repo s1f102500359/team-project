@@ -1,8 +1,33 @@
 body{
+    margin: 0;
     font-family:cursive;
+    background-color: #FFFFFF;
+    color: #7E675E;
 }
 
-h1{
+h1#site-title{
+    margin: 0;
+    padding: 20px;
+    color: #5A4E4D;
+    background-color: #DDA288;
+    border-bottom: double 7px #7E675E;
+    border-top: double 7px #7E675E;
+    text-align: center;
+}
+
+h1#title{
     font-family: "Hachi Maru Pop";
    
+}
+
+table{
+    border: solid;
+    border-collapse: collapse;
+}
+
+table th{
+    border: dashed 1px;
+}
+table td{
+    border: dashed 1px;
 }
