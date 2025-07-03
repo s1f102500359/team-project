@@ -13,9 +13,33 @@ body {
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
+    font-family: sans-serif;
 }
 
-h1 {
+.page-header {
+    background-color: #f0f0f0;
+    /* padding: 20px 0; */ /* 以前のパディングは不要になることが多い */
+    border-bottom: 1px solid #ccc;
+
+    border: 2px solid #333;
+    width: 80%;
+    margin: 20px auto;
+    box-sizing: border-box;
+
+    /* Flexboxプロパティを追加 */
+    display: flex; /* Flexコンテナにする */
+    justify-content: center; /* 水平方向の中央揃え */
+    align-items: center; /* 垂直方向の中央揃え */
+    height: 100px; /* 枠の高さを設定 (必要に応じて調整) */
+}
+
+.page-header h1 {
+    margin: 0; /* Flexアイテムなのでh1のデフォルトマージンをなくす */
+    font-size: 2em;
+    color: #333;
+}
+
+h2 {
     color: #2c3e50;
     text-align: center;
     margin-bottom: 50px;
