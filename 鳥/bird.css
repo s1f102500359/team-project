@@ -1,24 +1,34 @@
-div#top,#down{display: flex;flex-direction: row;}
-div.logo{width: 15%;position: fixed;}
-div.title{width: 85%;border: solid 1px;margin: 5px;}
-div.menu{width: 15%;height: 80%;border: solid 1px;margin-right: 5px;position: fixed;}
-div.main{width: 85%;height: 80%;display: flex;flex-direction: column;}
 h2,h1,p.center{text-align: center;}
-div.a{display: flex;flex-direction: row;justify-content: flex-start;}
-div.explain,.image{width: 50%;}
-div.space{width: 25%;}
-div.logospace{width: 15%;}
-div.menuspace{width: 15%;height: 80%;margin-right: 5px}
-div.image{background-color: #E8FEE9;padding-top: 10%;padding-left: 10%;}
-.photo1{opacity: 0;position: relative; animation: fadeIn 1s ease 0.65s forwards,moveText 1s ease 0.65s forwards;animation-fill-mode: forwards;}
-.main{opacity: 0; animation: fadeIn 1s ease 0.5s forwards;}
+#top,#down,.a{display: flex;flex-direction: row;}
+div.logo{width: 10%;border: solid;margin: 10px;}
+div.title{width: 100%;border: solid;}
+.menu{transform: translateX(-150%);border: solid;width: 10%;position: fixed;transition: transform .3s ease;}
+.menu.open{transform: translateX(0%);}
+.main{transform: translateX(0%);width:100%;transition: transform .3s ease;}
+body{overflow-x: hidden;}
+.explain{width: 50%;position: relative;padding: 20px;background-color: white;z-index: 1;box-sizing: border-box;}
+.explain::before{content: "";position: absolute;top: 0;left: 0;right: 0;bottom: 0;background-color: #f3f3f3;background-image: radial-gradient(#ccc 1px,transparent 1px),radial-gradient(#e0e0e0 1px, transparent 1px);background-size: 18px 18px;background-position: 0 0, 9px 9px;border-radius:8px;z-index: -1;padding: 10px;}
+#click.hide{display:  none}
+.main.wide{transform: translateX(10.5%);}
+.image{transform: translateX(0%);padding-top: 5%;transition: transform .3s ease;text-align: center;padding-right: 200px;width: 50%;}
+.photo1{transform: translateX(45%);transition: transform .3s ease;opacity: 0;position: relative; animation: fadeIn 1s ease 0.65s forwards,moveText 1s ease 0.65s forwards;animation-fill-mode: forwards;}
+.photo1.px{transform: translateX(10%)}
+.photo2{transform: translateX(5%);transition: transform .3s ease;padding-top: 20px;opacity: 0;position: relative; animation: fadeIn 1s ease 0.85s forwards,moveText 1s ease 0.65s forwards;animation-fill-mode: forwards;}
+.photo2.px{transform: translateX(10%)}
+.photo3{transform: translateX(45%);transition: transform .3s ease;padding-top: 20px;opacity: 0;position: relative; animation: fadeIn 1s ease 1.05s forwards,moveText 1s ease 0.65s forwards;animation-fill-mode: forwards;}
+.photo3.px{transform: translateX(10%)}
+div.image{background-color: #f3f3f3;background-image: radial-gradient(#ccc 1px,transparent 1px),radial-gradient(#e0e0e0 1px, transparent 1px);background-size: 18px 18px;background-position: 0 0, 9px 9px;}
+.image.px{transform: translateX(0%);}
+#click {position: fixed;top: 100px;left: 20px;z-index: 100;width: 48px;height: 48px;border: none;background: transparent;cursor: pointer;background-color: #00256650;}
+#button{ height: 48px; width: 48px;height: 48px;border: none;  background: transparent;cursor: pointer;background-color: #3a006600;}
+.line {position: absolute;left: 11px;width: 26px;height: 2px;background-color: #004d66;transition: all .4s;}
+.line:nth-of-type(1) {top: 14px;}
+.line:nth-of-type(2) {top: 23px;}
+.line:nth-of-type(3) {top: 32px;}
+.cross {position: absolute;left: 11px;width: 26px;height: 2px;background-color: #004d66;transition: all .4s;}
+.cross:nth-of-type(1) {top: 14px;transform: translateY(9px) rotate(-45deg);}
+.cross:nth-of-type(2) {top: 23px;opacity: 0;}
+.cross:nth-of-type(3) {top: 32px;transform: translateY(-9px) rotate(45deg);}
+.close{position: absolute;top:10px;right: 10px;z-index: 10;}
 @keyframes fadeIn{from{opacity: 0;} to{opacity: 1;}}
 @keyframes moveText{from{right: 0;}to{right: 50px;}}
-div.explain{border: solid 30px;border-image: linear-gradient(to bottom,#a2ecc4,#d0f4f7)1 ;}
-div.image{background:linear-gradient(to bottom,#a2ecc4,#d0f4f7);padding-top: 10%;padding-left: 10%;}
-body{overflow-x: hidden;}
-
-  
-
-
-
