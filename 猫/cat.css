@@ -17,17 +17,72 @@ h1#site-title{
 
 h1#title{
     font-family: "Hachi Maru Pop";
+    text-align: center;
    
+}
+
+h2{
+    text-align: center;
+}
+
+p{
+    text-align: center;
 }
 
 table{
     border: solid;
     border-collapse: collapse;
+    text-align: center;
 }
 
 table th{
     border: dashed 1px;
+    background-color: #afb9cf;
+    color: #5A4E4D;
 }
+
 table td{
     border: dashed 1px;
+}
+
+table td.icon{
+     width: 60px;
+     height: 60px;
+     background-size: cover; /* 画像をセルに合わせる */
+     background-position: center center;
+     background-repeat: no-repeat;
+     border: 1px solid #ccc;
+     color: #DDA288;
+}
+
+table td.icon.scottish{
+    background-image: url(画像/scottish.jpg);
+    color: #5A4E4D;
+}
+
+table td.icon.ragdoll{
+    background-image: url(画像/ragdoll.jpg);
+}
+
+table td.icon.siberian{
+    background-image: url(画像/siberian.jpg);
+    color: #5A4E4D;
+}
+
+table td.icon.russian{
+    background-image: url(画像/russian.jpg);
+}
+
+table td.icon.american{
+    background-image: url(画像/american.jpg);
+    color: #5A4E4D;
+}
+
+table td.icon.persian{
+    background-image: url(画像/persian.jpg);
+}
+
+table td.icon.munchkin{
+    background-image: url(画像/munchikin.jpg);
+    color: #5A4E4D;
 }
