@@ -1,11 +1,36 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-   <title>チーム開発サイト</title>
-   <link rel="stylesheet" type="text/css"  href="css/index.css"> 
-<body>
-    <h1>タイトル</h1>
-    <p>ここは、あなたがきっと好きになる4つの動物たちが集まる特別な場所！
+    <head>
+        <meta charset="UTF-8">
+        <title>チーム開発サイト</title>
+        <link rel="stylesheet" href="../css/index.css" type="text/css">
+    </head>
+    <body>
+        <div id="top">
+          
+            <div class="title">
+                <h1 class="center">タイトル</h1>
+            </div>
+        </div>
+        <div id="down">
+            
+            <div class="menu">
+                <div class="close">
+                    <button id="button"><span class="cross"></span><span class="cross"></span><span class="cross"></span></button>
+                </div>
+                <br><br>
+                <p class="center"><a href="dog.html">犬</a></p>
+                <p class="center"><a href="bear.html">熊</a></p>
+                <p class="center"><a href="bird.html">鳥</a></p>
+                <p class="center"><a href="cat.html">猫</a></p>
+            </div>
+            <div class="open">
+                <button id="click"><span class="line"></span><span class="line"></span><span class="line"></span></button>
+            </div>
+            <div class="main">
+                <div class="a">
+                    <div class="explain">
+                        <p>ここは、あなたがきっと好きになる4つの動物たちが集まる特別な場所！
 さあ、一緒に彼らの世界を深く探検していきましょう！</p>
 <div class="links">
     <p>↓リンクはこちら(画像をクリックで各動物のページに移動します)↓</p>
@@ -14,5 +39,23 @@
     <p><a href="鳥/bird.html"><img id="bird" src="もくじ用画像/pexels-pixabay-46166.jpg" ></a>
     <a href="猫/cat.html"><img id="cat" src="もくじ用画像/pexels-evgeniya-davydova-35773675-11198056.jpg"></a></p>
 </div>
-</body>    
-</html>
+                    </div> 
+                   
+                </div>  
+            </div>
+        </div>
+        <script>                
+            const buttonclose=document.getElementById('button')
+            const buttonopen=document.getElementById('click')
+            const menu=document.querySelector('.menu')
+            const main=document.querySelector('.main')
+            const openbox=document.querySelector('.open')
+            const closebox=document.querySelector('.close')
+            const image=document.querySelector('.image')
+            const photo1=document.querySelector('.photo1')
+            const photo2=document.querySelector('.photo2')
+            const photo3=document.querySelector('.photo3')
+            click.addEventListener('click',()=>{menu.classList.add('open');buttonopen.classList.add('hide');main.classList.add('wide');image.classList.add('px');photo1.classList.add('px');photo2.classList.add('px');photo3.classList.add('px')})
+            button.addEventListener('click',() =>{menu.classList.remove('open');buttonopen.classList.remove('hide');main.classList.remove('wide');image.classList.remove('px');photo1.classList.remove('px'),photo2.classList.remove('px');photo3.classList.remove('px')})
+        </script>
+    </body>
