@@ -1,13 +1,13 @@
 h2,h1,p.center{text-align: center;}
 #top,#down,.a{display: flex;flex-direction: row;}
 div.logo{width: 10%;border: solid;margin: 10px;}
-div.title{width: 100%;border: solid;}
+div.title{width: 100%;border: solid ;}
 .menu{transform: translateX(-150%);border: solid;width: 10%;position: fixed;transition: transform .3s ease;}
 .menu.open{transform: translateX(0%);}
 .main{transform: translateX(0%);width:100%;transition: transform .3s ease;}
 body{overflow-x: hidden;}
-.explain{width: 50%;position: relative;padding: 20px;background-color: white;z-index: 1;box-sizing: border-box;}
-.explain::before{content: "";position: absolute;top: 0;left: 0;right: 0;bottom: 0;background-color: #f3f3f3;background-image: radial-gradient(#ccc 1px,transparent 1px),radial-gradient(#e0e0e0 1px, transparent 1px);background-size: 18px 18px;background-position: 0 0, 9px 9px;border-radius:8px;z-index: -1;padding: 10px;}
+.explain{width: 50%;position: relative;padding: 20px;background-color: rgba(255, 255, 255, 0.9);z-index: 1;box-sizing: border-box;}
+.explain::before{content: "";position: absolute;top: 0;left: 0;right: 0;bottom: 0;background-color: #e8f5e9;background-image: radial-gradient(#c8e6c9 1px,transparent 1px),radial-gradient(#a5d6a7 1px, transparent 1px);background-size: 18px 18px;background-position: 0 0, 9px 9px;border-radius:8px;z-index: -1;padding: 10px;}
 #click.hide{display:  none}
 .main.wide{transform: translateX(10.5%);}
 .image{transform: translateX(0%);padding-top: 5%;transition: transform .3s ease;text-align: center;padding-right: 200px;width: 50%;}
@@ -17,8 +17,8 @@ body{overflow-x: hidden;}
 .photo2.px{transform: translateX(10%)}
 .photo3{transform: translateX(45%);transition: transform .3s ease;padding-top: 20px;opacity: 0;position: relative; animation: fadeIn 1s ease 1.05s forwards,moveText 1s ease 0.65s forwards;animation-fill-mode: forwards;}
 .photo3.px{transform: translateX(10%)}
-div.image{background-color: #f3f3f3;background-image: radial-gradient(#ccc 1px,transparent 1px),radial-gradient(#e0e0e0 1px, transparent 1px);background-size: 18px 18px;background-position: 0 0, 9px 9px;}
-.image.px{transform: translateX(0%);}
+div.image{background-color: #e8f5e9;background-image: radial-gradient(#c8e6c9 1px,transparent 1px),radial-gradient(#a5d6a7 1px, transparent 1px);background-size: 18px 18px;background-position: 0 0, 9px 9px;}
+.image.px{transform: translateX(-1%);}
 #click {position: fixed;top: 100px;left: 20px;z-index: 100;width: 48px;height: 48px;border: none;background: transparent;cursor: pointer;background-color: #00256650;}
 #button{ height: 48px; width: 48px;height: 48px;border: none;  background: transparent;cursor: pointer;background-color: #3a006600;}
 .line {position: absolute;left: 11px;width: 26px;height: 2px;background-color: #004d66;transition: all .4s;}
@@ -32,3 +32,8 @@ div.image{background-color: #f3f3f3;background-image: radial-gradient(#ccc 1px,t
 .close{position: absolute;top:10px;right: 10px;z-index: 10;}
 @keyframes fadeIn{from{opacity: 0;} to{opacity: 1;}}
 @keyframes moveText{from{right: 0;}to{right: 50px;}}
+.menu{background-color: #fffde7;}
+#top{background-color: #aed581;}
+body{background-color: #e3f2fd;margin: 0;}
+.menu a{display: inline-block;font-size: 18px;color: #388e3c;text-decoration: none;transition:transform 0.1s ease,font-size 0.1s ease;}
+.menu a:hover{transform: scale(1.3);font-weight: bold;color: #f57c00;}
