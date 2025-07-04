@@ -86,3 +86,138 @@ table td.icon.munchkin{
     background-image: url(画像/munchikin.jpg);
     color: #5A4E4D;
 }
+
+img {
+    display: block; /* 画像をブロック要素にして中央寄せしやすくする */
+    margin: 20px auto; /* 中央寄せ */
+    max-width: 100%; /* 親要素からはみ出さないように */
+    height: auto;
+}
+/* ================================================= */
+/* ここからメニュー関連の新しいスタイル */
+/* ================================================= */
+#down {
+    display: flex; /* メニューとメインコンテンツを横並びにする */
+    width: 100%;
+    position: relative;
+    box-sizing: border-box;
+}
+.menu {
+    transform: translateX(-100%); /* 初期は画面外に完全に隠す */
+    border-right: solid 1px #7E675E; /* 右側に細いボーダー */
+    width: 200px; /* メニューの固定幅 */
+    position: fixed; /* 画面に固定 */
+    transition: transform .3s ease;
+    height: 100vh; /* 画面の高さに合わせる */
+    background-color: rgba(126, 103, 94, 0.95); /* メインカラーに合わせて調整（#7E675Eをベースに透過） */
+    color: #FFF; /* メニュー文字色を白に */
+    box-sizing: border-box;
+    z-index: 1000; /* 他のコンテンツより手前に */
+    padding-top: 60px; /* 閉じるボタンのスペースを確保 */
+}
+.menu.open {
+    transform: translateX(0%);
+}
+.menu p.center {
+    text-align: center;
+    margin-bottom: 15px; /* メニュー項目間の余白 */
+}
+.menu p.center a {
+    color: #FFEEDD; /* 明るめのベージュ系でリンク色を設定 */
+    text-decoration: none;
+    display: block;
+    padding: 10px 0;
+    transition: color 0.3s ease;
+    font-size: 1.1em; /* 少し文字を大きく */
+}
+.menu p.center a:hover {
+    color: #FFF; /* ホバー時の色を白に */
+    text-decoration: underline;
+}
+/* メインコンテンツ全体をラップするコンテナ */
+.main-content-wrapper {
+    flex-grow: 1; /* #down内で残りのスペースを全て占める */
+    transition: transform .3s ease;
+    box-sizing: border-box;
+    padding: 20px; /* メインコンテンツ全体のパディング */
+}
+/* メニューが開いた時のメインコンテンツラッパーの移動 */
+.main-content-wrapper.menu-open-layout {
+    transform: translateX(200px); /* メニューの幅と同じだけ移動 */
+}
+/* 既存のメインコンテンツを囲むdiv */
+.main-content {
+    /* 必要に応じてここに追加のスタイルを定義できます */
+}
+/* 開くボタンのコンテナ */
+.open-button-container {
+    position: fixed;
+    top: 100px; /* site-titleの下に配置 */
+    left: 20px;
+    z-index: 100;
+}
+#click {
+    width: 48px;
+    height: 48px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    background-color: rgba(221, 162, 136, 0.6); /* site-titleの背景色に合わせて少し透過 */
+}
+#click.hide {
+    display: none;
+}
+/* 閉じるボタン */
+#button {
+    height: 48px;
+    width: 48px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    background-color: transparent;
+    position: absolute; /* メニュー内部での絶対配置 */
+    top: 10px;
+    right: 10px;
+    z-index: 101; /* clickボタンより手前 */
+    display: none; /* 初期は非表示、JSで制御 */
+}
+/* ハンバーガーアイコンとX印の線 */
+.line, .cross {
+    position: absolute;
+    left: 11px;
+    width: 26px;
+    height: 2px;
+    background-color: #5A4E4D; /* site-titleの文字色に合わせて調整 */
+    transition: all .4s;
+}
+.line:nth-of-type(1) { top: 14px; }
+.line:nth-of-type(2) { top: 23px; }
+.line:nth-of-type(3) { top: 32px; }
+.cross:nth-of-type(1) { top: 14px; transform: translateY(9px) rotate(-45deg); }
+.cross:nth-of-type(2) { top: 23px; opacity: 0; }
+.cross:nth-of-type(3) { top: 32px; transform: translateY(-9px) rotate(45deg); }
+/* レスポンシブデザインの調整 */
+@media (max-width: 768px) {
+    table {
+        width: 95%; /* モバイルではテーブル幅を調整 */
+    }
+    table td, table th {
+        font-size: 0.9em; /* 文字サイズを少し小さく */
+        padding: 5px;
+    }
+    table td.icon {
+        width: 40px;
+        height: 40px;
+    }
+    /* メニュー関連のレスポンシブ調整 */
+    .menu {
+        width: 50%; /* スマートフォンではメニューの幅を広げる */
+    }
+    .main-content-wrapper.menu-open-layout {
+        transform: translateX(50%); /* モバイル版メニューの幅に合わせて移動 */
+    }
+    #click, #button {
+        top: 20px; /* 画面上部に寄せる */
+        left: 10px; /* 少し左に寄せる */
+    }
+}

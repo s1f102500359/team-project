@@ -10,6 +10,21 @@
   </head>
   <body>
     <h1 id="site-title">動物紹介サイト</h1>
+
+        <div id="down">
+        <div class="menu">
+            <button id="button"><span class="cross"></span><span class="cross"></span><span class="cross"></span></button>
+            <br><br>
+            <p class="center"><a href="../いぬ/dog.html">-neko-</a></p>
+            <p class="center"><a href="../クマ/bear_site.html">-kuma-</a></p>
+            <p class="center"><a href="../鳥/bird.html">-tori-</a></p>
+            <p class="center"><a href="./cat.html">-neko-</a></p> </div>
+        <div class="main-content-wrapper">
+            <div class="open-button-container">
+                <button id="click"><span class="line"></span><span class="line"></span><span class="line"></span></button>
+            </div>
+            <div class="main-content">
+
     <h1 id="title">ねこ -neko-</h1>
     <h2>-introduction-</h2>
     <p>そのcuteな見た目から、いぬと並ぶ人気の動物として、世界中で愛されている。</p>
@@ -92,6 +107,27 @@
     <h2>-What is your favorite cat?-</h2>
     <img src="画像/scottish.jpg" alt="スコティッシュフォールド">
 
+     </div>
+        </div> </div> <script>
+        const buttonclose = document.getElementById('button');
+        const buttonopen = document.getElementById('click');
+        const menu = document.querySelector('.menu');
+        const mainContentWrapper = document.querySelector('.main-content-wrapper');
+        // メニューを開くボタンがクリックされた時の処理
+        buttonopen.addEventListener('click', () => {
+            menu.classList.add('open');
+            buttonopen.classList.add('hide'); // 開くボタンを非表示
+            mainContentWrapper.classList.add('menu-open-layout'); // レイアウト調整クラスを追加
+            buttonclose.style.display = 'block'; // 閉じるボタンを表示
+        });
+        // メニューを閉じるボタンがクリックされた時の処理
+        buttonclose.addEventListener('click', () => {
+            menu.classList.remove('open');
+            buttonopen.classList.remove('hide'); // 開くボタンを表示
+            mainContentWrapper.classList.remove('menu-open-layout'); // レイアウト調整クラスを削除
+            buttonclose.style.display = 'none'; // 閉じるボタンを非表示
+        });
+    </script>
 
   </body>
 </html>
