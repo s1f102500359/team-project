@@ -3,6 +3,7 @@ div.text {
     padding: 50px;
     background-color: #FFFFFF;
     border: solid 2px;
+    font-family: Helvetica;
 }
 html{
     background-color: #e6d065;
@@ -56,9 +57,9 @@ div.image{background-color: #f3f3f3;background-image: radial-gradient(#ccc 1px,t
 .menu {
   background-color: #fafafa;   /* メニュー部の背景色 */
   border: 2px solid #333;      /* 枠線の色・太さ */
-  padding: 1em;                /* 領域内余白 */
+  padding: 10px;                /* 領域内余白 */
   box-sizing: border-box;      /* パディングを含めて幅を計算 */
-  font-size: 30px;
+  font-size: 20px;
 }
 .likedogs .likelist,
 .likedogs img {
