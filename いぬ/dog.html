@@ -5,9 +5,22 @@
    <link  rel="stylesheet" type="text/css"  href="dogcss.css"> 
 </head>
 <body>
+
     <h1 id="title">🐶犬🐶</h1>
-    
-    <div class="text">
+     <div class="menu">
+                <div class="close">
+                    <button id="button"><span class="cross"></span><span class="cross"></span><span class="cross"></span></button>
+                </div>
+                <br><br>
+                <p class="center"><a href="../いぬ/dog.html">犬</a></p>
+                <p class="center"><a href="../クマ/bear_site.html">熊</a></p>
+                <p class="center">鳥</p>
+                <p class="center"><a href="../猫/cat.html">猫</a></p>
+            </div>
+            <div class="open">
+                <button id="click"><span class="line"></span><span class="line"></span><span class="line"></span></button>
+            </div>
+    <div class="text main">
     <h2>食肉目イヌ科イヌ属</h2>
     <h2>学名:Canis lupus familiaris</h2>
     <h3>特徴</h3>
@@ -16,7 +29,7 @@
         <li>犬種は200種類以上も</li>
     </ul>
     <h3>日本産の犬種</h3>
-    日本に存在する犬種は
+    日本生まれの犬種は約６種類ほど
     <ul>
         <li>柴犬</li>
         日本を代表する中型犬。昔は猟犬として扱われた。   
@@ -24,19 +37,35 @@
         がっしりとした体格が特徴の大型犬。飼い主への忠誠心が強い。
     </ul>
     など...
+    <div class="likedogs">
     <h3>好きな犬種</h3>
-    <ul>
-        <li>ボルゾイ</li>
-        ロシアで猟犬として活躍した。ボルゾイはロシア語で「俊敏」を意味する。   
-        <li>サモエド</li>
-        シベリアの大型犬。口の形から微笑んでいるように見える。
-        <li>ビションフリーゼ</li>
-        フランス生まれの小型犬。白い巻き毛が特徴。
+    <ul class="likelist">
+        <li><strong>ボルゾイ</strong><br>
+        ロシアで猟犬として活躍した。<br>ボルゾイはロシア語で「俊敏」を意味する。</li>   
+        <li><strong>サモエド</strong><br>
+        シベリアの大型犬。<br>口の形から微笑んでいるように見える。</li>
+        <li><strong>ビションフリーゼ</strong><br>
+        フランス生まれの小型犬。<br>白い巻き毛が特徴。</li>
     </ul>
+    
+    <img src="dog_img/犬イラスト.png">
+    </div>
     <h3>コメント</h3>
     白くてモフモフな犬が大好きです。<br>
     両手でつまんでモフモフしたい。
-</div>
 
+</div>
+<script>                
+            const buttonclose=document.getElementById('button')
+            const buttonopen=document.getElementById('click')
+            const menu=document.querySelector('.menu')
+            const main=document.querySelector('.main')
+            const openbox=document.querySelector('.open')
+            const closebox=document.querySelector('.close')
+            const image=document.querySelector('.image')
+     
+            click.addEventListener('click',()=>{menu.classList.add('open');buttonopen.classList.add('hide');main.classList.add('wide');image.classList.add('px');photo1.classList.add('px');photo2.classList.add('px');photo3.classList.add('px')})
+            button.addEventListener('click',() =>{menu.classList.remove('open');buttonopen.classList.remove('hide');main.classList.remove('wide');image.classList.remove('px');photo1.classList.remove('px'),photo2.classList.remove('px');photo3.classList.remove('px')})
+        </script>
 </body>    
 </html>
