@@ -3,40 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="bear_site.css">
-    <title>クマサイト</title> 
+    <link rel="stylesheet" href="bear_site.css"> <title>クマサイト</title>
 </head>
-<body> <header class="page-header">  
-        <h1>タイトル</h1>
-    </header>
-    <h2>クマ</h2>
-    
-    <ul>
-        <li>
-            <strong>基本情報</strong>
-            <p>哺乳綱食肉目クマ科の動物</p>
-            <p>日本には２種,海外には８種存在している</p>
-            <p>日本にいるクマは「ヒグマ」「ツキノワグマ」である</p>
-            <p>ヒグマは日本最大の哺乳類である</p>
-        </li>
-        <li>
-            <strong>特徴</strong>
-            <p>基本四足歩行だが二足歩行も得意</p>
-            <p>木登り・泳ぎも得意</p>
-            <p>肉や植物や昆虫までも食べる雑食性</p>
-            <p>冬には冬眠をする</p>
-        </li>
-        <li><strong>なぜ好きか</strong>
-            <p>かわいいから！！！！！！！</p>
-        </li>
-        <li>
-            <strong>生息地</strong>
-            <p>北アメリカ、南アメリカ、ユーラシア大陸、インドネシア、スリランカ、台湾、日本、そして北極圏など幅広く生息しています</p>
-        </li>
-        <li>
-            <strong>豆知識～クマのコミュニケーション～</strong>
-            <li>クマは互いに様々な方法でコミュニケーションを取ります。唸り声、吠え声、唸り声、ハミング、そして「チャンプ」と呼ばれる唇を鳴らす音など、多様な発声をします。また、木に爪痕を残したり、特定の場所で体をこすりつけたりして、自分の存在を示したり、縄張り主張したりすることもあります。</li>
-        </li>
-    </ul>
+<body>
+    <div id="top">
+        <div class="title">
+            <h1 class="center">クマサイトのタイトル</h1>
+        </div>
+    </div>
+
+    <div id="down">
+        <div class="menu">
+            <button id="button"><span class="cross"></span><span class="cross"></span><span class="cross"></span></button>
+            <br><br>
+            <p class="center"><a href="../いぬ/dog.html">犬</a></p>
+            <p class="center"><a href="../クマ/bear_site.html">熊</a></p>
+            <p class="center"><a href="../鳥/bird.html">鳥</a></p>
+            <p class="center"><a href="../猫/cat.html">猫</a></p>
+        </div>
+
+        <div class="main-content-wrapper">
+            <div class="open-button-container">
+                <button id="click"><span class="line"></span><span class="line"></span><span class="line"></span></button>
+            </div>
+
+            <div class="main">
+                <div class="a">
+                    <div class="explain">
+                        <h2>クマ</h2>
+                        <ul>
+                            <li>
+                                <strong>基本情報</strong>
+                                <p>哺乳綱食肉目クマ科の動物</p>
+                                <p>日本には２種,海外には８種存在している</p>
+                                <p>日本にいるクマは「ヒグマ」「ツキノワグマ」である</p>
+                                <p>ヒグマは日本最大の哺乳類である</p>
+                            </li>
+                            <li>
+                                <strong>特徴</strong>
+                                <p>基本四足歩行だが二足歩行も得意</p>
+                                <p>木登り・泳ぎも得意</p>
+                                <p>肉や植物や昆虫までも食べる雑食性</p>
+                                <p>冬には冬眠をする</p>
+                            </li>
+                            <li><strong>なぜ好きか</strong>
+                                <p>かわいいから！！！！！！！</p>
+                            </li>
+                            <li>
+                                <strong>生息地</strong>
+                                <p>北アメリカ、南アメリカ、ユーラシア大陸、インドネシア、スリランカ、台湾、日本、そして北極圏など幅広く生息しています</p>
+                            </li>
+                            <li>
+                                <strong>豆知識～クマのコミュニケーション～</strong>
+                                <li>クマは互いに様々な方法でコミュニケーションを取ります。唸り声、吠え声、唸り声、ハミング、そして「チャンプ」と呼ばれる唇を鳴らす音など、多様な発声をします。また、木に爪痕を残したり、特定の場所で体をこすりつけたりして、自分の存在を示したり、縄張り主張したりすることもあります。</li>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="image">
+                        <div class="photo1">
+                            <img src="bear-cub-2691535_1280.jpg" alt="クマ画像1" width="400">
+                        </div>
+                        <div class="photo2">
+                            <img src="polar-bear-3141153_1280.jpg" alt="クマ画像2" width="400">
+                        </div>
+                        <div class="photo3">
+                            <img src="grizzly-bear-824707_1280.jpg" alt="クマ画像3" width="400">
+                        </div>
+                    </div>
+                </div> </div> </div> </div> <script>
+        const buttonclose = document.getElementById('button');
+        const buttonopen = document.getElementById('click');
+        const menu = document.querySelector('.menu');
+        const main = document.querySelector('.main');
+        // openbox, closebox はHTMLから削除したため、ここでも使用しません
+        const image = document.querySelector('.image');
+        const photo1 = document.querySelector('.photo1');
+        const photo2 = document.querySelector('.photo2');
+        const photo3 = document.querySelector('.photo3');
+        const mainContentWrapper = document.querySelector('.main-content-wrapper'); // 新しく追加したラッパー
+
+        // メニューを開くボタンがクリックされた時の処理
+        buttonopen.addEventListener('click', () => {
+            menu.classList.add('open');
+            buttonopen.classList.add('hide'); // 開くボタンを非表示
+            main.classList.add('wide');
+            image.classList.add('px');
+            photo1.classList.add('px');
+            photo2.classList.add('px');
+            photo3.classList.add('px');
+            buttonclose.style.display = 'block'; // 閉じるボタンを表示
+            mainContentWrapper.classList.add('menu-open-layout'); // 新しく追加したレイアウト調整クラス
+        });
+
+        // メニューを閉じるボタンがクリックされた時の処理
+        buttonclose.addEventListener('click', () => {
+            menu.classList.remove('open');
+            buttonopen.classList.remove('hide'); // 開くボタンを表示
+            main.classList.remove('wide');
+            image.classList.remove('px');
+            photo1.classList.remove('px');
+            photo2.classList.remove('px');
+            photo3.classList.remove('px');
+            buttonclose.style.display = 'none'; // 閉じるボタンを非表示
+            mainContentWrapper.classList.remove('menu-open-layout'); // レイアウト調整クラスを削除
+        });
+    </script>
 </body>
 </html>
