@@ -3,7 +3,7 @@ h2,h1,p.center{text-align: center;}
 div.logo{width: 10%;border: solid;margin: 10px;}
 div.title{width: 100%;border: solid;}
 .menu{transform: translateX(-150%);border: solid;width: 10%;position: fixed;transition: transform .3s ease;}
-.menu.open{transform: translateX(0%);}
+.menu.open{transform: translateX(0%);z-index: 10;}
 .main{transform: translateX(8%);width:100%;transition: transform .3s ease;}
 body{overflow-x: hidden;}
 .explain{width: 100%;position: relative;padding: 20px;;}
@@ -32,6 +32,13 @@ div.image{background-color: #f3f3f3;background-image: radial-gradient(#ccc 1px,t
 .close{position: absolute;top:10px;right: 10px;z-index: 10;}
 @keyframes fadeIn{from{opacity: 0;} to{opacity: 1;}}
 @keyframes moveText{from{right: 0;}to{right: 50px;}}
+.links{
+    text-align: center;
+}
+#explain{
+    position: relative;
+    right: 80px;
+}
 .links img{
     height: 300px;
     transition: transform 0.3s ease-in-out;
@@ -43,20 +50,20 @@ div.image{background-color: #f3f3f3;background-image: radial-gradient(#ccc 1px,t
 }
 #dog{
     position: relative;
-    left: 90px;
+    right: 286px;
 }
 #bear{
     position: relative;
-    left: 312px;
+    right: 85px;
 }
 #bird{
     position: relative;
-    left: 300px;
+    right: 100px;
     bottom: 21px;
 }
 #cat{
     position: relative;
-    left: 548px;
+    left: 128px;
     bottom: 21px;
 }
 h1{
